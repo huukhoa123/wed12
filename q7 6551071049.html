@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ta, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: aqua;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return login(event)">
+        <table>
+            <caption style="color: red;">ĐĂNG NHẬP</caption>
+            <tr>
+                <td>Mã người dùng</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Mật Khẩu</td>
+                <td><input type="password" name="mk" id="mk"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="ĐỒNG Ý" onclick="login()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function login(event) {
+            let user = document.getElementById("name").value;
+            document.getElementById("result").innerHTML = 
+            <a href="#">${user}</a>
+            return false;
+        }
+    </script>
+</body>
+</html>
