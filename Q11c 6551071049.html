@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu đa cấp</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /* Menu chính */
+    ul {
+    
+      list-style: none;
+      background: linear-gradient(orange, #ff9900);
+    }
+    ul li {
+      position: relative;
+      float: left;
+    }
+    ul li a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    ul li a:hover {
+      background: #cc6600;
+    }
+
+    /* Submenu cấp 1 */
+    ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 180px;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+    ul li ul li {
+      float: none;
+      border-bottom: 1px solid #eee;
+    }
+    ul li ul li a {
+      color: black;
+      font-weight: normal;
+      padding: 10px;
+    }
+    ul li ul li a:hover {
+      background: #f2f2f2;
+      color: #cc6600;
+    }
+
+    /* Submenu cấp 2 (con của submenu cấp 1) */
+    ul li ul li ul {
+      top: 0;
+      left: 100%;
+      border: 1px solid #ccc;
+    }
+
+    /* Hiển thị submenu khi hover */
+    ul li:hover > ul {
+      display: block;
+    }
+
+    /* Clear float */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <ul class="clearfix">
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li>
+      <a href="#">Tin tức</a>
+      <ul>
+        <li><a href="#">Tin thể thao</a></li>
+        <li><a href="#">Tin thế giới</a></li>
+        <li><a href="#">Tin xã hội</a></li>
+        <li>
+          <a href="#">Khoa học công nghệ</a>
+          <ul>
+            <li><a href="#">Công nghệ mới</a></li>
+            <li><a href="#">Khoa học máy tính</a></li>
+            <li><a href="#">Khoa học vũ trụ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Liên hệ</a></li>
+    <li><a href="#">Góp ý</a></li>
+  </ul>
+</body>
+</html>
