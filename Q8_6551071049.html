@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phiếu đăng ký tham gia chương trình khuyến mãi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fff8;
+        }
+        h2 {
+            color: green;
+            text-align: center;
+        }
+        form {
+            width: 500px;
+            margin: auto;
+            border: 1px solid #999;
+            padding: 15px;
+            background: #e9ffe9;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+        .success {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 95%;
+            padding: 4px;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+        input[type="submit"] {
+            padding: 6px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" name="hoten" value="Nguyễn Ngọc Quỳnh Nga"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="diachi" value="2 Bà Hùng Vương, Q10"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" name="dienthoai" value="0909097506"></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <input type="radio" name="phai" checked> Nam
+                    <input type="radio" name="phai"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td><input type="text" name="nghenghiep" value="Giáo viên"></td>
+            </tr>
+            <tr>
+                <td>Chọn sản phẩm tham gia</td>
+                <td>
+                    <select name="sanpham">
+                        <option>Kem đánh răng</option>
+                        <option>Bột giặt</option>
+                        <option selected>Dầu gội đầu</option>
+                        <option>Sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số người dự đoán tham gia</td>
+                <td><input type="text" name="songuoi" value="250000"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Đồng ý"></td>
+            </tr>
+        </table>
+        <p class="success">Bạn đã đăng ký thành công!!!</p>
+    </form>
+</body>
+</html>
